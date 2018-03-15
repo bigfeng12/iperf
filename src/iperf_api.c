@@ -3172,7 +3172,11 @@ iperf_new_stream(struct iperf_test *test, int s)
             tempdir = getenv("TMP");
         }
         if (tempdir == 0){
+#ifdef ANDROID
+            tempdir = "/data/misc/wifi";
+#else
             tempdir = "/tmp";
+#endif
         }
         snprintf(template, sizeof(template) / sizeof(char), "%s/iperf3.XXXXXX", tempdir);
     }
