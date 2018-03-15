@@ -54,6 +54,23 @@ None.
 
 (Note: If configure fails, try running `./bootstrap.sh` first)
 
+Building iperf3 in Android build system (ARM CPU)
+---------------
+
+1. clone the repo
+
+2. cp source to android source code base: 
+
+   cp soruce_file external/iperf3
+
+3. run configure to generate .h file:
+
+   ./configure --host=arm-linux
+
+4. run android build cmd:
+
+   mmm external/iperf3
+
 Invoking iperf3
 ---------------
 
