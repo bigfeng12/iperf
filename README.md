@@ -57,7 +57,8 @@ None.
 Building iperf3 in Android build system (ARM CPU)
 ---------------
 
-    1. clone the repo
+    1. clone the repo and checkout to 3.0 stable
+       git checkout -b test remotes/origin/3.0-STABLE
 
     2. cp source to android source code base:
        mkdir external/iperf3
